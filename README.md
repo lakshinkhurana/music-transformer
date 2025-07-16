@@ -27,25 +27,37 @@ This repository is a reimplementation of the research paper:
 
 ## 🗂️ Project Structure
 
-```bash
-music-transformer/
+```bashmusic-transformer/
+│
 ├── data/
-│   └── midi/              # Input MIDI files (for training)
+│   ├── jsb_chorales/
+│   └── piano_midi/
+│
+├── preprocessing/
+│   ├── midi_parser.py
+│   ├── chorale_converter.py
+│
 ├── model/
-│   ├── transformer.py     # Transformer model implementation
-│   ├── relative_attention.py  # Relative self-attention module
-├── utils/
-│   ├── midi_utils.py      # MIDI parsing and encoding tools
-│   └── training_utils.py  # Training/evaluation helpers
-├── configs/
-│   └── config.yaml        # Hyperparameters and training configuration
-├── train.py               # Training script
-├── generate.py            # Inference / Music generation
-├── requirements.txt
-└── README.md
-````
+│   ├── transformer.py
+│   ├── relative_attention.py
+│
+├── training/
+│   ├── train_baseline.py
+│   ├── train_relative.py
+│
+├── evaluation/
+│   ├── eval_nll.py
+│   ├── generate_music.py
+│   └── visualize_attention.py
+│
+├── outputs/
+│   ├── generated/
+│   ├── logs/
+│
+├── README.md
+└── requirements.txt
 
----
+````
 
 ## 📦 Installation
 
@@ -65,81 +77,10 @@ pip install -r requirements.txt
 
 ---
 
-## 🎼 Dataset
+## Week 1
+*Reading the paper completely will be the main goal , completely understanding what i need to implement before getting to coding 
+*Gathering datasets would be the next task and I'd proceed to data preprocessing after that
 
-Use any of the following datasets (preprocessed into tokenized sequences):
-
-* [MAESTRO Dataset (by Google)](https://magenta.tensorflow.org/datasets/maestro)
-* [JSB Chorales Dataset](https://github.com/czhuang/JSB-Chorales-dataset)
-
-To preprocess MIDI files:
-
-```bash
-python utils/midi_utils.py --input_dir data/midi --output_file data/encoded_data.pkl
-```
-
----
-
-## 🏋️ Training
-
-Edit `configs/config.yaml` to set hyperparameters and paths.
-
-Then run:
-
-```bash
-python train.py --config configs/config.yaml
-```
-
----
-
-## 🎧 Generation
-
-To generate a MIDI file from a trained model:
-
-```bash
-python generate.py --checkpoint_path checkpoints/best_model.pth --output_dir generated/
-```
-
-This will generate a `.mid` file you can play using any MIDI player or DAW.
-
----
-
-## 📊 Results
-
-| Model Variant          | Perplexity ↓ | Coherence ↑ | Notes                        |
-| ---------------------- | ------------ | ----------- | ---------------------------- |
-| Transformer (Baseline) | 1.78         | Medium      |                              |
-| **Music Transformer**  | **1.63**     | **High**    | Achieves long-term structure |
-
-Sample generations available in the `generated/` directory.
-
----
-
-## 📌 TODOs
-
-* [x] Relative positional attention
-* [x] MIDI tokenization and data loader
-* [x] Training loop
-* [x] Music generation script
-* [ ] Beam search for generation
-* [ ] Web interface (streamlit?)
-
----
-
-## ✏️ Citation
-
-If you use this code or base your work on this implementation, please cite:
-
-```bibtex
-@article{huang2018musictransformer,
-  title={Music Transformer: Generating Music with Long-Term Structure},
-  author={Huang, Cheng-Zhi Anna and Vaswani, Ashish and Uszkoreit, Jakob and Shazeer, Noam and Simon, Ian and Hawthorne, Curtis and Dai, Andrew M. and Hoffman, Matthew D. and Dinculescu, Mihael and Eck, Douglas},
-  journal={arXiv preprint arXiv:1809.04281},
-  year={2018}
-}
-```
-
----
 
 ## 🧠 Credits
 
@@ -152,8 +93,8 @@ If you use this code or base your work on this implementation, please cite:
 ## 📨 Contact
 
 For queries, issues, or suggestions:
-📧 [your.email@example.com](mailto:your.email@example.com)
-🐦 Twitter: [@yourhandle](https://twitter.com/yourhandle)
+📧 [lakshinkhurana@gmail.com](mailto:lakshinkhurana@gmail.com)
+👜 LinkedIn: [@yourhandle](https://twitter.com/yourhandle)
 
 ---
 

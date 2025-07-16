@@ -76,10 +76,24 @@ pip install -r requirements.txt
 * `pytorch-lightning` *(optional)*
 
 ---
-
 ## Week 1
-*Reading the paper completely will be the main goal , completely understanding what i need to implement before getting to coding 
-*Gathering datasets would be the next task and I'd proceed to data preprocessing after that
+
+- 📖 **Read the Paper Thoroughly**  
+  Gain a complete understanding of the Music Transformer paper. Focus on:
+  - The motivation behind using relative attention
+  - Data representation methods for JSB Chorales and Piano-e-Competition
+  - Transformer architecture modifications
+  - Evaluation methods and sample generation
+
+- 📦 **Dataset Collection**  
+  - Download the [JSB Chorales dataset](https://github.com/czhuang/JSB-Chorales-dataset)
+  - Download the MIDI files for the [Piano-e-Competition dataset](http://www.piano-e-competition.com/)
+
+- 🧹 **Prepare for Data Preprocessing**  
+  - Study the event-based encoding scheme used in the paper
+  - Understand how sustain pedal, timing, and velocity are handled in MIDI preprocessing
+  - Plan the pipeline for converting raw MIDI to token sequences
+
 
 
 ## 🧠 Credits

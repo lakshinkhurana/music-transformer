@@ -1,8 +1,3 @@
-Here's a complete `README.md` file template for a reimplementation of the paper **"Music Transformer: Generating Music with Long-Term Structure"** by Huang et al., designed to give clarity and structure to your GitHub project:
-
----
-
-````markdown
 # 🎵 Music Transformer: Generating Music with Long-Term Structure
 
 This repository is a reimplementation of the research paper:  

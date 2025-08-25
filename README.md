@@ -37,8 +37,8 @@ generation.
 
 ## 🏆 Final Evaluation
 
--   **Evaluation Loss**: \~0.275\
--   **Perplexity**: \~1.316\
+-   **Evaluation Loss**: \~0.275
+-   **Perplexity**: \~1.316
 -   **Accuracy**: \~92.8%
 
 ------------------------------------------------------------------------

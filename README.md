@@ -15,6 +15,7 @@ generation.
     -   `perplexity.png`\
     -   `trainVSval.png`\
 -   `final_model.pth` → Saved trained model weights.
+-   `requirements.txt`
 
 ------------------------------------------------------------------------
 
@@ -54,6 +55,7 @@ generation.
 2.  Open the Jupyter Notebook:
 
     ``` bash
+    pip install -r requirements.txt
     jupyter notebook music_transformer.ipynb
     ```
 

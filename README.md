@@ -9,11 +9,11 @@ generation.
 ## 📂 Project Structure
 
 -   `music_transformer.ipynb` → Main Jupyter Notebook containing the
-    model, training, and evaluation code.\
+    model, training, and evaluation code.
 -   `graphs/` → Contains training & evaluation plots.
-    -   `accuracy.png`\
-    -   `perplexity.png`\
-    -   `trainVSval.png`\
+    -   `accuracy.png`
+    -   `perplexity.png`
+    -   `trainVSval.png`
 -   `final_model.pth` → Saved trained model weights.
 -   `requirements.txt`
 

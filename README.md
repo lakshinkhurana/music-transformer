@@ -16,6 +16,8 @@ generation.
     -   `trainVSval.png`
 -   `final_model.pth` → Saved trained model weights.
 -   `requirements.txt`
+-   `README.md`
+-   `LICENSE`
 
 ------------------------------------------------------------------------
 
@@ -37,11 +39,20 @@ generation.
 
 ## 🏆 Final Evaluation
 
--   **Evaluation Loss**: \~0.275
--   **Perplexity**: \~1.316
--   **Accuracy**: \~92.8%
+-   **Evaluation Loss**: \~1.835
+-   **Perplexity**: \~6.26
+-   **Accuracy**: \~16%
 
 ------------------------------------------------------------------------
+
+## ⚠️ Note on Metrics
+
+In earlier runs, the model appeared to show very high accuracy. However, this was misleading because the Music Transformer had collapsed into predicting only the **padding token**.  
+Since the evaluation data contained many padding positions, the metrics were artificially inflated and did not reflect real learning.  
+
+This issue was fixed by updating the training loop and applying **loss masking** to ignore padding tokens.  
+As a result, the reported metrics are now lower but **accurately represent model performance** on musical sequence prediction.
+
 
 ## 🚀 How to Use
 
